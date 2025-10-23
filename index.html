@@ -5,140 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>YouthSpark — Helping Youngsters Reach Their Potential</title>
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/feather-icons"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#4F46E5',
-            secondary: '#10B981',
-            ink: '#0a0b10'
-          },
-          fontFamily: {
-            display: ['Poppins','ui-sans-serif','system-ui']
-          },
-          boxShadow: {
-            glow: '0 10px 30px rgba(79,70,229,.35), inset 0 1px 0 rgba(255,255,255,.04)'
-          },
-          backdropBlur: {
-            xs: '4px'
-          },
-          keyframes: {
-            floaty: { '0%,100%':{ transform:'translateY(0)' }, '50%':{ transform:'translateY(-10px)' } },
-            pulseRing: { '0%':{ boxShadow:'0 0 0 0 rgba(16,185,129,.6)' }, '80%':{ boxShadow:'0 0 0 20px rgba(16,185,129,0)' }, '100%':{ boxShadow:'0 0 0 0 rgba(16,185,129,0)' } },
-            marquee: { from:{ transform:'translateX(0)' }, to:{ transform:'translateX(-50%)' } }
-          },
-          animation: {
-            floaty: 'floaty 6s ease-in-out infinite',
-            pulseRing: 'pulseRing 2.5s cubic-bezier(.2,.6,.4,1) infinite',
-            marquee: 'marquee 22s linear infinite'
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
-
-    /* Gradient Mesh Background + Subtle Noise */
-    .mesh-bg {
-      position: fixed; inset: 0; z-index: -2;
-      background:
-        radial-gradient(60vw 60vw at 10% 20%, rgba(99,102,241,.30), transparent 60%),
-        radial-gradient(50vw 50vw at 90% 10%, rgba(16,185,129,.30), transparent 55%),
-        radial-gradient(40vw 40vw at 50% 80%, rgba(236,72,153,.25), transparent 60%),
-        linear-gradient(180deg, #0a0b10 0%, #0e1122 100%);
-      filter: saturate(1.1) contrast(1.05);
-    }
-    .noise-overlay {
-      position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .08;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
-      mix-blend-mode: overlay;
-    }
-
-    /* Glass Card */
-    .glass {
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.14);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-    }
-    .glass-strong {
-      background: rgba(255,255,255,.10);
-      border: 1px solid rgba(255,255,255,.18);
-      backdrop-filter: blur(18px);
-    }
-    /* Neon border accent */
-    .neon {
-      position: relative;
-    }
-    .neon::after {
-      content: "";
-      position: absolute;
-      inset: -1px;
-      border-radius: inherit;
-      background: linear-gradient(135deg, rgba(79,70,229,.7), rgba(16,185,129,.6));
-      filter: blur(12px);
-      opacity: .45;
-      z-index: -1;
-    }
-
-    /* Scroll-driven animations: reveal + parallax */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px) scale(.98); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0 }
-      to { opacity: 1 }
-    }
-    @keyframes parallaxIn {
-      from { transform: translateY(24px) }
-      to { transform: translateY(-12px) }
-    }
-    /* Apply view() timelines for modern browsers */
-    .reveal {
-      animation: fadeUp 1s ease both;
-      animation-timeline: view();
-      animation-range: 10% 40%;
-    }
-    .parallax {
-      animation: parallaxIn 1.2s ease both;
-      animation-timeline: view();
-      animation-range: entry 60%;
-    }
-    .fade {
-      animation: fadeIn .8s ease both;
-      animation-timeline: view();
-      animation-range: 0% 30%;
-    }
-
-    /* Scroll progress bar */
-    #scrollbar {
-      position: fixed; top: 0; left: 0; height: 3px; width: 100%;
-      background: linear-gradient(90deg, rgba(79,70,229,.25), rgba(16,185,129,.25));
-      z-index: 60;
-    }
-    #scrollfill {
-      height: 100%; width: 0%;
-      background: linear-gradient(90deg, #4F46E5, #10B981);
-      box-shadow: 0 0 12px rgba(79,70,229,.6);
-      transform-origin: left;
-    }
-    /* Use scroll timeline if available */
-    @supports (animation-timeline: scroll()) {
-      #scrollfill { animation: grow 1s linear both; animation-timeline: scroll(); }
-      @keyframes grow { from { width: 0% } to { width: 100% } }
-    }
-
-    /* Utility: text gradient */
-    .text-gradient {
-      background: linear-gradient(90deg, #fff 20%, #a5b4fc 50%, #34d399 80%);
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
-  </style>
 </head>
 <body class="bg-ink text-white font-display antialiased">
   <!-- Background layers -->
@@ -275,9 +144,8 @@
         <div class="glass rounded-2xl p-6 neon reveal">
           <div class="flex items-center gap-3">
             <span class="w-12 h-12 rounded-xl bg-primary/20 grid place-items-center text-primary"><i data-feather="briefcase"></i></span>
-            <p class="text-lg font-semibold">Skill Development</p>
+            <p class="mt-3 text-white/80">Workshops to build practical skills for personal and professional growth.</p>
           </div>
-          <p class="mt-3 text-white/80">Workshops to build practical skills for personal and professional growth.</p>
         </div>
       </div>
     </div>
@@ -295,7 +163,7 @@
         <!-- Testimonial Card -->
         <article class="glass rounded-2xl p-6 hover:bg-white/14 transition reveal">
           <div class="flex items-center">
-            <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=200&fit=crop" alt="">
+            <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=200&fit=crop" alt="Rahul K.">
             <div class="ml-4">
               <h3 class="text-lg font-semibold">Rahul K.</h3>
               <p class="text-secondary">Recovery Program</p>
@@ -306,7 +174,7 @@
 
         <article class="glass rounded-2xl p-6 hover:bg-white/14 transition reveal">
           <div class="flex items-center">
-            <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=200&fit=crop" alt="">
+            <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=200&fit=crop" alt="Priya M.">
             <div class="ml-4">
               <h3 class="text-lg font-semibold">Priya M.</h3>
               <p class="text-secondary">Mentorship Program</p>
@@ -317,7 +185,7 @@
 
         <article class="glass rounded-2xl p-6 hover:bg-white/14 transition reveal">
           <div class="flex items-center">
-            <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=200&fit=crop" alt="">
+            <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=200&fit=crop" alt="Arjun S.">
             <div class="ml-4">
               <h3 class="text-lg font-semibold">Arjun S.</h3>
               <p class="text-secondary">Skills Workshop</p>
@@ -413,33 +281,6 @@
     </div>
   </footer>
 
-  <script>
-    feather.replace();
-
-    // Fallback scroll progress (for browsers without CSS scroll timeline)
-    const fill = document.getElementById('scrollfill');
-    if (!CSS.supports('animation-timeline: scroll()')) {
-      window.addEventListener('scroll', () => {
-        const h = document.documentElement;
-        const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight);
-        fill.style.width = (scrolled * 100).toFixed(2) + '%';
-      }, { passive: true });
-    }
-
-    // Animated counters
-    function animateValue(el, end, duration=1200) {
-      const start = 0, startTime = performance.now();
-      function tick(now) {
-        const p = Math.min((now - startTime) / duration, 1);
-        const val = Math.floor(start + (end - start) * (p < .5 ? 2*p*p : -1 + (4 - 2*p) * p));
-        el.textContent = val.toLocaleString();
-        if (p < 1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-    }
-    animateValue(document.getElementById('stat1'), 3421, 1400);
-    animateValue(document.getElementById('stat2'), 128, 1400);
-    animateValue(document.getElementById('stat3'), 64, 1400);
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
