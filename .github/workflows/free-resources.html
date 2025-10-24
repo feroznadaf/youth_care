@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Free Resources — YouthSpark</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4F46E5',
+            secondary: '#10B981',
+            ink: '#0a0b10'
+          },
+          fontFamily: {
+            display: ['Poppins','ui-sans-serif','system-ui']
+          },
+          boxShadow: {
+            glow: '0 10px 30px rgba(79,70,229,.35), inset 0 1px 0 rgba(255,255,255,.04)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-ink text-white font-display antialiased">
+  <!-- Background layers -->
+  <div class="mesh-bg"></div>
+  <div class="noise-overlay"></div>
+  <div id="scrollbar"><div id="scrollfill"></div></div>
+
+  <!-- Nav -->
+  <nav class="sticky top-0 z-50 backdrop-blur bg-black/30 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-lg glass-strong neon grid place-items-center shadow-glow">
+          <i data-feather="heart" class="w-4 h-4 text-secondary"></i>
+        </span>
+        <a href="index.html" class="text-xl font-extrabold hover:text-secondary transition">YouthSpark</a>
+      </div>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-white/80 hover:text-white transition">Home</a>
+        <a href="index.html#programs" class="text-white/80 hover:text-white transition">Programs</a>
+        <a href="free-resources.html" class="text-white transition">Resources</a>
+        <a href="index.html#stories" class="text-white/80 hover:text-white transition">Success Stories</a>
+        <a href="about.html" class="text-white/80 hover:text-white transition">About</a>
+        <a href="index.html#contact" class="text-white/80 hover:text-white transition">Contact</a>
+        <a href="index.html#help" class="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary text-white shadow-glow hover:brightness-110 transition">
+          <i data-feather="life-buoy" class="w-4 h-4"></i> Get Help
+        </a>
+      </div>
+      <button class="md:hidden p-2 glass-strong rounded-lg" aria-label="Open menu">
+        <i data-feather="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative overflow-hidden py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl glass mb-4">
+          <i data-feather="book" class="w-5 h-5 text-secondary"></i>
+          <span class="text-secondary font-semibold">Empower Yourself</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6">
+          <span class="block">Free</span>
+          <span class="block text-gradient">Resources & Tools</span>
+        </h1>
+        <p class="text-white/80 text-lg max-w-3xl mx-auto">
+          Access our curated collection of free PDF books, guides, worksheets, and tools to support your personal growth, recovery, and skill development journey.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Filter & Search -->
+      <div class="glass rounded-2xl p-6 neon mb-12 reveal">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-semibold mb-2">Search Resources</label>
+            <input type="text" id="search-input" placeholder="Search books, guides, tools..." class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:border-primary focus:outline-none transition">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-2">Filter by Category</label>
+            <select id="category-filter" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white focus:border-primary focus:outline-none transition">
+              <option value="all" class="bg-ink">All Categories</option>
+              <option value="self-help" class="bg-ink">Self-Help</option>
+              <option value="recovery" class="bg-ink">Recovery & Addiction</option>
+              <option value="career" class="bg-ink">Career & Skills</option>
+              <option value="mental-health" class="bg-ink">Mental Health</option>
+              <option value="worksheet" class="bg-ink">Worksheets & Tools</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Self-Help Books -->
+      <section class="mb-16 reveal">
+        <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+          <i data-feather="book-open" class="w-8 h-8 text-secondary"></i>
+          Self-Help & Personal Development
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Resource 1 -->
+          <div class="glass rounded-2xl p-6 neon card-hover resource-card" data-category="self-help">
+            <div class="w-full h-40 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-xl mb-4 flex items-center justify-center">
+              <i data-feather="book-open" class="w-16 h-16 text-white/80"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Mindfulness Guide</h3>
+            <p class="text-sm text-white/70 mb-4">Learn to live in the present moment and reduce stress through practical mindfulness techniques.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">PDF • 45 Pages</span>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary hover:text-primary transition">
+                <i data-feather="download" class="w-4 h-4"></i> Download
+              </a>
+            </div>
+          </div>
+
+          <!-- Resource 2 -->
+          <div class="glass rounded-2xl p-6 neon card-hover resource-card" data-category="self-help">
+            <div class="w-full h-40 bg-gradient-to-br from-blue-500/30 to-cyan-500/30 rounded-xl mb-4 flex items-center justify-center">
+              <i data-feather="book-open" class="w-16 h-16 text-white/80"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Building Confidence</h3>
+            <p class="text-sm text-white/70 mb-4">Transform your self-belief with proven exercises and techniques to boost self-esteem.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">PDF • 38 Pages</span>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary hover:text-primary transition">
+                <i data-feather="download" class="w-4 h-4"></i> Download
+              </a>
+            </div>
+          </div>
+
+          <!-- Resource 3 -->
+          <div class="glass rounded-2xl p-6 neon card-hover resource-card" data-category="self-help">
+            <div class="w-full h-40 bg-gradient-to-br from-green-500/30 to-emerald-500/30 rounded-xl mb-4 flex items-center justify-center">
+              <i data-feather="book-open" class="w-16 h-16 text-white/80"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Emotional Intelligence</h3>
+            <p class="text-sm text-white/70 mb-4">Master your emotions and develop stronger interpersonal skills for better relationships.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">PDF • 52 Pages</span>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary hover:text-primary transition">
+                <i data-feather="download" class="w-4 h-4"></i> Download
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recovery & Mental Health -->
+      <section class="mb-16 reveal">
+        <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+          <i data-feather="heart" class="w-8 h-8 text-secondary"></i>
+          Recovery & Mental Health
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Resource 4 -->
+          <div class="glass rounded-2xl p-6 neon card-hover resource-card" data-category="recovery">
+            <div class="w-full h-40 bg-gradient-to-br from-orange-500/30 to-red-500/30 rounded-xl mb-4 flex items-center justify-center">
+              <i data-feather="book-open" class="w-16 h-16 text-white/80"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Addiction Recovery Guide</h3>
+            <p class="text-sm text-white/70 mb-4">Comprehensive guide to understanding addiction and practical steps towards lasting recovery.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">PDF • 68 Pages</span>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary hover:text-primary transition">
+                <i data-feather="download" class="w-4 h-4"></i> Download
+              </a>
+            </div>
+          </div>
+
+          <!-- Resource 5 -->
+          <div class="glass rounded-2xl p-6 neon card-hover resource-card" data-category="mental-health">
+            <div class="w-full h-40 bg-gradient-to-br from-indigo-500/30 to-purple-500/30 rounded-xl mb-4 flex items-center justify-center">
+              <i data-feather="book-open" class="w-16 h-16 text-white/80"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Overcoming Anxiety</h3>
+            <p class="text-sm text-white/70 mb-4">Practical strategies and coping mechanisms to manage anxiety and live with peace.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">PDF • 42 Pages</span>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary hover:text-primary transition">
+                <i data-feather="download" class="w-4 h-4"></i> Download
+              </a>
+            </div>
+          </div>
+
+          <!-- Resource 6 -->
+          <div class="glass rounded-2xl p-6 neon card-hover resource-card" data-category="mental-health">
+            <div class="w-full h-40 bg-gradient-to-br from-pink-500/30 to-rose-500/30 rounded-xl mb-4 flex items-center justify-center">
+              <i data-feather="book-open" class="w-16 h-16 text-white/80"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Understanding Depression</h3>
+            <p class="text-sm text-white/70 mb-4">Recognize signs of depression and discover evidence-based treatment and self-care approaches.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">PDF • 55 Pages</span>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary hover:text-primary transition">
+                <i data-feather="download" class="w-4 h-4"></i> Download
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Career & Skills -->
+      <section class="mb-16 reveal">
+        <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+          <i data-feather="briefcase" class="w-8 h-8 text-secondary"></i>
+          Career & Skill Development
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Resource 7 -->
+          <div class="glass rounded-2xl p-6 neon card-hover resource-card" data-category="career">
+            <div class="w-full h-40 bg-gradient-to-br from-teal-500/30 to-cyan-500/30 rounded-xl mb-4 flex items-center justify-center">
+              <i data-feather="book-open" class="w-16 h-16 text-white/80"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Career Planning Guide</h3>
+            <p class="text-sm text-white/70 mb-4">Design your dream career path with actionable steps and strategies for success.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">PDF • 48 Pages</span>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary hover:text-primary transition">
+                <i data-feather="download" class="w-4 h-4"></i> Download
+              </a>
+            </div>
+          </div>
+
+          <!-- Resource 8 -->
+          <div class="glass rounded-2xl p-6 neon card-hover resource-card" data-category="career">
+            <div class="w-full h-40 bg-gradient-to-br from-amber-500/30 to-orange-500/30 rounded-xl mb-4 flex items-center justify-center">
+              <i data-feather="book-open" class="w-16 h-16 text-white/80"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Communication Skills</h3>
+            <p class="text-sm text-white/70 mb-4">Master effective communication techniques for professional and personal relationships.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">PDF • 40 Pages</span>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary hover:text-primary transition">
+                <i data-feather="download" class="w-4 h-4"></i> Download
+              </a>
+            </div>
+          </div>
+
+          <!-- Resource 9 -->
+          <div class="glass rounded-2xl p-6 neon card-hover resource-card" data-category="career">
+            <div class="w-full h-40 bg-gradient-to-br from-lime-500/30 to-green-500/30 rounded-xl mb-4 flex items-center justify-center">
+              <i data-feather="book-open" class="w-16 h-16 text-white/80"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Time Management 101</h3>
+            <p class="text-sm text-white/70 mb-4">Boost productivity and organize your life with proven time management strategies.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">PDF • 35 Pages</span>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary hover:text-primary transition">
+                <i data-feather="download" class="w-4 h-4"></i> Download
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Worksheets & Tools -->
+      <section class="mb-16 reveal">
+        <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+          <i data-feather="clipboard" class="w-8 h-8 text-secondary"></i>
+          Interactive Worksheets & Tools
+        </h2>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <!-- Worksheet 1 -->
+          <div class="glass rounded-2xl p-6 neon card-hover resource-card" data-category="worksheet">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-bold text-lg">Goal Setting Worksheet</h3>
+              <i data-feather="target" class="w-6 h-6 text-secondary"></i>
+            </div>
+            <p class="text-white/70 mb-4">Interactive worksheet to help you set SMART goals and track your progress towards success.</p>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-white/70">PDF • Fillable • Printable</span>
+              </div>
+              <a href="#" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/20 text-primary hover:bg-primary hover:text-white transition w-full justify-center">
+                <i data-feather="download" class="w-4 h-4"></i> Download
+              </a>
+            </div>
+          </div>
+
+          <!-- Worksheet 2 -->
+          <div class="glass rounded-2xl p-6 neon card-hover resource-card" data-category="worksheet">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-bold text-lg">Daily Reflection Journal</h3>
+              <i data-feather="edit-2" class="w-6 h-6 text-secondary"></i>
+            </div>
+            <p class="text-white/70 mb-4">30-day guided journal to enhance self-awareness and track your personal growth journey.</p>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-white/70">PDF • 60 Pages • Daily</span>
+              </div>
+              <a href="#" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/20 text-primary hover:bg-primary hover:text-white transition w-full justify-center">
+                <i data-feather="download" class="w-4 h-4"></i> Download
+              </a>
+            </div>
+          </div>
+
+          <!-- Worksheet 3 -->
+          <div class="glass rounded-2xl p-6 neon card-hover resource-card" data-category="worksheet">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-bold text-lg">Habit Tracker</h3>
+              <i data-feather="trending-up" class="w-6 h-6 text-secondary"></i>
+            </div>
+            <p class="text-white/70 mb-4">Build positive habits with this comprehensive 90-day tracking tool and monitoring system.</p>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-white/70">PDF • Fillable • 90 Days</span>
+              </div>
+              <a href="#" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/20 text-primary hover:bg-primary hover:text-white transition w-full justify-center">
+                <i data-feather="download" class="w-4 h-4"></i> Download
+              </a>
+            </div>
+          </div>
+
+          <!-- Worksheet 4 -->
+          <div class="glass rounded-2xl p-6 neon card-hover resource-card" data-category="worksheet">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-bold text-lg">Anxiety Management Tool</h3>
+              <i data-feather="heart" class="w-6 h-6 text-secondary"></i>
+            </div>
+            <p class="text-white/70 mb-4">Quick reference guide with grounding techniques and coping strategies for anxiety episodes.</p>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-white/70">PDF • Pocket Size • Quick Access</span>
+              </div>
+              <a href="#" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/20 text-primary hover:bg-primary hover:text-white transition w-full justify-center">
+                <i data-feather="download" class="w-4 h-4"></i> Download
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Additional Resources -->
+      <section class="mb-16 reveal">
+        <div class="glass rounded-2xl p-8 md:p-12 neon">
+          <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+            <i data-feather="folder" class="w-8 h-8 text-secondary"></i>
+            Additional Resources
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="border-l-4 border-secondary pl-4">
+              <h3 class="font-bold text-lg mb-2">Video Tutorials</h3>
+              <p class="text-white/80 mb-4">Watch our collection of short, actionable video tutorials on various topics from meditation to career planning.</p>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary hover:text-primary transition">
+                <i data-feather="play-circle" class="w-4 h-4"></i> Browse Videos
+              </a>
+            </div>
+            <div class="border-l-4 border-primary pl-4">
+              <h3 class="font-bold text-lg mb-2">Podcasts</h3>
+              <p class="text-white/80 mb-4">Listen to inspiring conversations with mentors, success stories, and expert advice on personal growth.</p>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary hover:text-primary transition">
+                <i data-feather="radio" class="w-4 h-4"></i> Listen Now
+              </a>
+            </div>
+            <div class="border-l-4 border-secondary pl-4">
+              <h3 class="font-bold text-lg mb-2">Webinars</h3>
+              <p class="text-white/80 mb-4">Join live interactive sessions with experts discussing recovery, career, and personal development.</p>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary hover:text-primary transition">
+                <i data-feather="monitor" class="w-4 h-4"></i> Register Free
+              </a>
+            </div>
+            <div class="border-l-4 border-primary pl-4">
+              <h3 class="font-bold text-lg mb-2">Resource Library</h3>
+              <p class="text-white/80 mb-4">Access our comprehensive collection of articles, case studies, and research papers on youth development.</p>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary hover:text-primary transition">
+                <i data-feather="book" class="w-4 h-4"></i> Explore Library
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="reveal">
+        <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-4 max-w-3xl mx-auto">
+          <!-- FAQ 1 -->
+          <div class="glass rounded-2xl p-6 neon faq-item">
+            <button class="flex items-center justify-between w-full faq-toggle">
+              <h3 class="font-bold text-lg">Are all resources really free?</h3>
+              <i data-feather="chevron-down" class="w-5 h-5"></i>
+            </button>
+            <p class="text-white/80 mt-4 faq-content hidden">Yes, all our resources are completely free. We believe that access to quality self-help materials and tools should not be limited by financial constraints. Simply download what you need!</p>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="glass rounded-2xl p-6 neon faq-item">
+            <button class="flex items-center justify-between w-full faq-toggle">
+              <h3 class="font-bold text-lg">Do I need to register to download resources?</h3>
+              <i data-feather="chevron-down" class="w-5 h-5"></i>
+            </button>
+            <p class="text-white/80 mt-4 faq-content hidden">No registration is required! You can directly download any resource without providing your email or personal information. However, if you'd like to receive updates about new resources, you can subscribe to our newsletter.</p>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="glass rounded-2xl p-6 neon faq-item">
+            <button class="flex items-center justify-between w-full faq-toggle">
+              <h3 class="font-bold text-lg">Can I share these resources with others?</h3>
+              <i data-feather="chevron-down" class="w-5 h-5"></i>
+            </button>
+            <p class="text-white/80 mt-4 faq-content hidden">Absolutely! We encourage you to share these resources with family, friends, and anyone who might benefit from them. Sharing is caring, and we want as many people as possible to access this support.</p>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="glass rounded-2xl p-6 neon faq-item">
+            <button class="flex items-center justify-between w-full faq-toggle">
+              <h3 class="font-bold text-lg">How often are new resources added?</h3>
+              <i data-feather="chevron-down" class="w-5 h-5"></i>
+            </button>
+            <p class="text-white/80 mt-4 faq-content hidden">We add new resources every month based on user feedback and emerging topics. Subscribe to our newsletter to get notified about the latest additions to our resource library.</p>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="glass rounded-2xl p-6 neon faq-item">
+            <button class="flex items-center justify-between w-full faq-toggle">
+              <h3 class="font-bold text-lg">What if I need personalized help?</h3>
+              <i data-feather="chevron-down" class="w-5 h-5"></i>
+            </button>
+            <p class="text-white/80 mt-4 faq-content hidden">If you need personalized support beyond self-help resources, we offer free counseling, mentorship programs, and support groups. Contact us to learn about these services and get connected with our team.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <div class="mt-20 glass rounded-2xl p-8 md:p-12 neon reveal text-center">
+        <i data-feather="heart" class="w-16 h-16 text-secondary mx-auto mb-6"></i>
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Still Need More Support?</h2>
+        <p class="text-white/80 mb-8 max-w-2xl mx-auto">
+          These resources are a great starting point, but sometimes you need personalized support. Reach out to our team for counseling, mentorship, or to join support groups.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="index.html#help" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-white shadow-glow hover:brightness-110 transition">
+            <i data-feather="life-buoy" class="w-4 h-4"></i> Get Help Now
+          </a>
+          <a href="index.html#contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass text-white hover:bg-white/15 transition">
+            <i data-feather="mail" class="w-4 h-4"></i> Contact Us
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid xl:grid-cols-3 gap-8">
+        <div class="space-y-4 reveal">
+          <div class="flex items-center gap-2">
+            <span class="w-8 h-8 rounded-lg glass-strong neon grid place-items-center"><i data-feather="heart" class="w-4 h-4 text-white"></i></span>
+            <span class="text-xl font-extrabold">YouthSpark</span>
+          </div>
+          <p class="text-white/70">Empowering youth since 2015 — mentorship, recovery, skills, and purpose.</p>
+          <div class="flex gap-4">
+            <a class="text-white/70 hover:text-secondary hover:scale-110 transition" href="https://www.facebook.com/people/Youth-Care/100079715082112/" aria-label="Facebook"><i data-feather="facebook"></i></a>
+            <a class="text-white/70 hover:text-secondary hover:scale-110 transition" href="https://www.instagram.com/youth__care/" aria-label="Instagram"><i data-feather="instagram"></i></a>
+            <a class="text-white/70 hover:text-secondary hover:scale-110 transition" href="https://wa.me/919876543210" aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </a>
+            <a class="text-white/70 hover:text-secondary hover:scale-110 transition" href="#" aria-label="YouTube"><i data-feather="youtube"></i></a>
+          </div>
+        </div>
+        <div class="xl:col-span-2 grid sm:grid-cols-3 gap-8 reveal">
+          <div>
+            <h4 class="text-white/80 font-semibold uppercase tracking-wider text-sm">Programs</h4>
+            <ul class="mt-4 space-y-3 text-white/70">
+              <li><a href="index.html#programs" class="hover:text-secondary transition">Mentorship</a></li>
+              <li><a href="index.html#programs" class="hover:text-secondary transition">Addiction Recovery</a></li>
+              <li><a href="index.html#programs" class="hover:text-secondary transition">Skill Workshops</a></li>
+              <li><a href="index.html#programs" class="hover:text-secondary transition">Career Guidance</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white/80 font-semibold uppercase tracking-wider text-sm">Support</h4>
+            <ul class="mt-4 space-y-3 text-white/70">
+              <li><a href="#" class="hover:text-secondary transition">FAQs</a></li>
+              <li><a href="privacy-policy.html" class="hover:text-secondary transition">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-secondary transition">Terms of Service</a></li>
+              <li><a href="index.html#help" class="hover:text-secondary transition">Donate</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white/80 font-semibold uppercase tracking-wider text-sm">Company</h4>
+            <ul class="mt-4 space-y-3 text-white/70">
+              <li><a href="about.html" class="hover:text-secondary transition">About</a></li>
+              <li><a href="#" class="hover:text-secondary transition">Team</a></li>
+              <li><a href="index.html#help" class="hover:text-secondary transition">Volunteer</a></li>
+              <li><a href="index.html#help" class="hover:text-secondary transition">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 pt-8 border-t border-white/10 text-center text-white/60">
+        © 2025 YouthSpark. All rights reserved. Registered NGO in India.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact Button -->
+  <a href="index.html#contact" id="contact-float" class="fixed bottom-5 right-5 z-50 bg-secondary text-white shadow-lg rounded-full px-5 py-3 flex items-center gap-2 hover:bg-primary hover:shadow-xl transition" title="Contact Us">
+    <i data-feather="mail"></i> Contact Us
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      feather.replace();
+
+      // Fallback scroll progress
+      const fill = document.getElementById('scrollfill');
+      if (!CSS.supports('animation-timeline: scroll()')) {
+        window.addEventListener('scroll', () => {
+          const h = document.documentElement;
+          const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight);
+          fill.style.width = (scrolled * 100).toFixed(2) + '%';
+        }, { passive: true });
+      }
+
+      // Search and filter functionality
+      const searchInput = document.getElementById('search-input');
+      const categoryFilter = document.getElementById('category-filter');
+      const resourceCards = document.querySelectorAll('.resource-card');
+
+      function filterResources() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const selectedCategory = categoryFilter.value;
+
+        resourceCards.forEach(card => {
+          const cardText = card.textContent.toLowerCase();
+          const cardCategory = card.getAttribute('data-category');
+
+          const matchesSearch = cardText.includes(searchTerm);
+          const matchesCategory = selectedCategory === 'all' || cardCategory === selectedCategory;
+
+          if (matchesSearch && matchesCategory) {
+            card.style.display = '';
+            card.classList.add('animate-fadeIn');
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      searchInput.addEventListener('input', filterResources);
+      categoryFilter.addEventListener('change', filterResources);
+
+      // FAQ toggle functionality
+      const faqToggles = document.querySelectorAll('.faq-toggle');
+      faqToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const faqItem = toggle.parentElement;
+          const content = faqItem.querySelector('.faq-content');
+          const icon = toggle.querySelector('[data-feather]');
+
+          content.classList.toggle('hidden');
+          icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+          icon.style.transition = 'transform 0.3s ease';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
