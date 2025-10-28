@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Careers — Youth Care</title>
+  <link rel="icon" type="image/x-icon" href="assets\242704840_555691849056000_3791125399268383836_n.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4F46E5',
+            secondary: '#10B981',
+            ink: '#0a0b10'
+          },
+          fontFamily: {
+            display: ['Poppins','ui-sans-serif','system-ui']
+          },
+          boxShadow: {
+            glow: '0 10px 30px rgba(79,70,229,.35), inset 0 1px 0 rgba(255,255,255,.04)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-ink text-white font-display antialiased">
+  <!-- Background layers -->
+  <div class="mesh-bg"></div>
+  <div class="noise-overlay"></div>
+  <div id="scrollbar"><div id="scrollfill"></div></div>
+
+  <!-- Nav -->
+   <nav class="sticky top-0 z-50 backdrop-blur bg-black/30 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+       <span class="w-8 h-8 rounded-lg glass-strong neon grid place-items-center shadow-glow overflow-hidden bg-black">
+  <img src="assets\242704840_555691849056000_3791125399268383836_n-removebg-preview.png" alt="YouthSpark Logo" class="object-cover w-full h-full" />
+</span>
+        <a href="index.html" class="text-xl font-extrabold hover:text-secondary transition">YouthCare</a>
+      </div>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-white/80 hover:text-white transition">Home</a>
+        <a href="programs.html" class="text-white/80 hover:text-white transition">Programs</a>
+        <a href="free-resources.html" class="text-white/80 hover:text-white transition">Resources</a>
+        <a href="stories.html" class="text-white/80 hover:text-white transition">Success Stories</a>
+        <a href="about.html" class="text-white/80 hover:text-white transition">About</a>
+        <a href="careers.html" class="text-white transition">Careers</a>
+        <a href="contact-us.html" class="text-white/80 hover:text-white transition">Contact</a>
+        <a href="help.html" class="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary text-white shadow-glow hover:brightness-110 transition">
+          <i data-feather="life-buoy" class="w-4 h-4"></i> Get Help
+        </a>
+      </div>
+      <button class="md:hidden p-2 glass-strong rounded-lg" aria-label="Open menu">
+        <i data-feather="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative overflow-hidden py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl glass mb-4">
+          <i data-feather="briefcase" class="w-5 h-5 text-secondary"></i>
+          <span class="text-secondary font-semibold">Build Your Career With Purpose</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6">
+          <span class="block">Careers</span>
+          <span class="block text-gradient">At Youth Care</span>
+        </h1>
+        <p class="text-white/80 text-lg max-w-3xl mx-auto">
+          Join a mission-driven team where your work transforms lives. We're looking for passionate professionals who want to make a real difference in youth development.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Why Work Here -->
+      <section class="mb-16 reveal">
+        <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+          <i data-feather="star" class="w-8 h-8 text-secondary"></i>
+          Why Work at Youth Care
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="glass rounded-2xl p-6 neon card-hover text-center">
+            <div class="w-12 h-12 rounded-xl bg-primary/20 grid place-items-center mx-auto mb-4">
+              <i data-feather="heart" class="w-6 h-6 text-primary"></i>
+            </div>
+            <h3 class="font-bold mb-2">Meaningful Work</h3>
+            <p class="text-white/70 text-sm">Every day, you'll see the direct impact of your work on young lives.</p>
+          </div>
+
+          <div class="glass rounded-2xl p-6 neon card-hover text-center">
+            <div class="w-12 h-12 rounded-xl bg-secondary/20 grid place-items-center mx-auto mb-4">
+              <i data-feather="trending-up" class="w-6 h-6 text-secondary"></i>
+            </div>
+            <h3 class="font-bold mb-2">Growth Opportunities</h3>
+            <p class="text-white/70 text-sm">We invest in training, workshops, and professional development.</p>
+          </div>
+
+          <div class="glass rounded-2xl p-6 neon card-hover text-center">
+            <div class="w-12 h-12 rounded-xl bg-primary/20 grid place-items-center mx-auto mb-4">
+              <i data-feather="users" class="w-6 h-6 text-primary"></i>
+            </div>
+            <h3 class="font-bold mb-2">Supportive Team</h3>
+            <p class="text-white/70 text-sm">Work with passionate colleagues who share your values and vision.</p>
+          </div>
+
+          <div class="glass rounded-2xl p-6 neon card-hover text-center">
+            <div class="w-12 h-12 rounded-xl bg-secondary/20 grid place-items-center mx-auto mb-4">
+              <i data-feather="clock" class="w-6 h-6 text-secondary"></i>
+            </div>
+            <h3 class="font-bold mb-2">Work-Life Balance</h3>
+            <p class="text-white/70 text-sm">Flexible hours, mental health days, and wellness programs.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Current Openings -->
+      <section class="mb-16 reveal">
+        <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+          <i data-feather="file-text" class="w-8 h-8 text-secondary"></i>
+          Current Job Openings
+        </h2>
+        <div class="space-y-6">
+          <!-- Job 1 -->
+          <div class="glass rounded-2xl p-6 neon card-hover">
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Youth Counselor</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">Full-time</span>
+                  <span class="text-xs bg-secondary/20 text-secondary px-3 py-1 rounded-full">Hyderabad</span>
+                  <span class="text-xs bg-white/10 text-white px-3 py-1 rounded-full">₹4-6 LPA</span>
+                </div>
+              </div>
+              <a href="#apply" class="px-6 py-3 rounded-xl bg-primary text-white hover:brightness-110 transition">Apply Now</a>
+            </div>
+            <p class="text-white/80 mb-4">Provide individual and group counseling to youth facing mental health challenges, addiction, and life transitions. Master's in Psychology/Social Work required.</p>
+            <div class="border-t border-white/10 pt-4">
+              <p class="text-sm text-white/70"><strong>Requirements:</strong> Master's degree in Psychology/Social Work, 2+ years counseling experience, empathy, strong communication skills</p>
+            </div>
+          </div>
+
+          <!-- Job 2 -->
+          <div class="glass rounded-2xl p-6 neon card-hover">
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Program Coordinator</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">Full-time</span>
+                  <span class="text-xs bg-secondary/20 text-secondary px-3 py-1 rounded-full">Hyderabad</span>
+                  <span class="text-xs bg-white/10 text-white px-3 py-1 rounded-full">₹3.5-5 LPA</span>
+                </div>
+              </div>
+              <a href="#apply" class="px-6 py-3 rounded-xl bg-primary text-white hover:brightness-110 transition">Apply Now</a>
+            </div>
+            <p class="text-white/80 mb-4">Oversee day-to-day operations of youth programs, coordinate workshops, manage volunteers, and track program outcomes. Strong organizational skills essential.</p>
+            <div class="border-t border-white/10 pt-4">
+              <p class="text-sm text-white/70"><strong>Requirements:</strong> Bachelor's degree, program management experience, MS Office proficiency, passion for youth development</p>
+            </div>
+          </div>
+
+          <!-- Job 3 -->
+          <div class="glass rounded-2xl p-6 neon card-hover">
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Social Media Manager</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">Full-time</span>
+                  <span class="text-xs bg-secondary/20 text-secondary px-3 py-1 rounded-full">Remote/Hybrid</span>
+                  <span class="text-xs bg-white/10 text-white px-3 py-1 rounded-full">₹3-4.5 LPA</span>
+                </div>
+              </div>
+              <a href="#apply" class="px-6 py-3 rounded-xl bg-primary text-white hover:brightness-110 transition">Apply Now</a>
+            </div>
+            <p class="text-white/80 mb-4">Develop and execute social media strategy to raise awareness, engage supporters, and promote programs. Create compelling content across platforms.</p>
+            <div class="border-t border-white/10 pt-4">
+              <p class="text-sm text-white/70"><strong>Requirements:</strong> 2+ years social media experience, content creation skills, knowledge of analytics tools, creative mindset</p>
+            </div>
+          </div>
+
+          <!-- Job 4 -->
+          <div class="glass rounded-2xl p-6 neon card-hover">
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Outreach Officer</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">Full-time</span>
+                  <span class="text-xs bg-secondary/20 text-secondary px-3 py-1 rounded-full">Hyderabad</span>
+                  <span class="text-xs bg-white/10 text-white px-3 py-1 rounded-full">₹3-4 LPA</span>
+                </div>
+              </div>
+              <a href="#apply" class="px-6 py-3 rounded-xl bg-primary text-white hover:brightness-110 transition">Apply Now</a>
+            </div>
+            <p class="text-white/80 mb-4">Build partnerships with schools, colleges, and community organizations. Conduct awareness sessions and recruit program participants.</p>
+            <div class="border-t border-white/10 pt-4">
+              <p class="text-sm text-white/70"><strong>Requirements:</strong> Bachelor's degree, excellent communication, networking skills, local language fluency, willing to travel</p>
+            </div>
+          </div>
+
+          <!-- Job 5 -->
+          <div class="glass rounded-2xl p-6 neon card-hover">
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Data Analyst (Intern)</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">Internship</span>
+                  <span class="text-xs bg-secondary/20 text-secondary px-3 py-1 rounded-full">Remote</span>
+                  <span class="text-xs bg-white/10 text-white px-3 py-1 rounded-full">Stipend: ₹10K/month</span>
+                </div>
+              </div>
+              <a href="#apply" class="px-6 py-3 rounded-xl bg-primary text-white hover:brightness-110 transition">Apply Now</a>
+            </div>
+            <p class="text-white/80 mb-4">Analyze program data, create reports, and help measure impact. 6-month internship with potential for full-time conversion.</p>
+            <div class="border-t border-white/10 pt-4">
+              <p class="text-sm text-white/70"><strong>Requirements:</strong> Pursuing/completed degree in Statistics/Data Science, Excel/Python skills, detail-oriented</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits -->
+      <section class="mb-16 reveal">
+        <div class="glass rounded-2xl p-8 md:p-12 neon">
+          <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+            <i data-feather="gift" class="w-8 h-8 text-secondary"></i>
+            Benefits & Perks
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="border-l-4 border-secondary pl-4">
+              <h3 class="font-bold text-lg mb-2">Health Insurance</h3>
+              <p class="text-white/70 text-sm">Comprehensive medical coverage for you and your family</p>
+            </div>
+
+            <div class="border-l-4 border-primary pl-4">
+              <h3 class="font-bold text-lg mb-2">Flexible Hours</h3>
+              <p class="text-white/70 text-sm">Work-life balance with flexible scheduling options</p>
+            </div>
+
+            <div class="border-l-4 border-secondary pl-4">
+              <h3 class="font-bold text-lg mb-2">Learning Budget</h3>
+              <p class="text-white/70 text-sm">Annual budget for courses, workshops, and conferences</p>
+            </div>
+
+            <div class="border-l-4 border-primary pl-4">
+              <h3 class="font-bold text-lg mb-2">Remote Work</h3>
+              <p class="text-white/70 text-sm">Hybrid work model with remote flexibility</p>
+            </div>
+
+            <div class="border-l-4 border-secondary pl-4">
+              <h3 class="font-bold text-lg mb-2">Wellness Programs</h3>
+              <p class="text-white/70 text-sm">Mental health support, yoga classes, team activities</p>
+            </div>
+
+            <div class="border-l-4 border-primary pl-4">
+              <h3 class="font-bold text-lg mb-2">Paid Time Off</h3>
+              <p class="text-white/70 text-sm">Generous leave policy including mental health days</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Application Form -->
+      <section id="apply" class="reveal">
+        <div class="glass rounded-2xl p-8 md:p-12 neon">
+          <h2 class="text-3xl font-bold mb-6 text-center">Apply for a Position</h2>
+          <form class="max-w-2xl mx-auto space-y-4">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold mb-2">Full Name *</label>
+                <input type="text" required class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:border-primary focus:outline-none transition">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2">Email *</label>
+                <input type="email" required class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:border-primary focus:outline-none transition">
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold mb-2">Phone Number *</label>
+                <input type="tel" required class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:border-primary focus:outline-none transition">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2">Position Applying For</label>
+                <select class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white focus:border-primary focus:outline-none transition">
+                  <option value="" class="bg-ink">Select a position</option>
+                  <option value="counselor" class="bg-ink">Youth Counselor</option>
+                  <option value="coordinator" class="bg-ink">Program Coordinator</option>
+                  <option value="social-media" class="bg-ink">Social Media Manager</option>
+                  <option value="outreach" class="bg-ink">Outreach Officer</option>
+                  <option value="intern" class="bg-ink">Data Analyst Intern</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-2">Cover Letter *</label>
+              <textarea required rows="5" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:border-primary focus:outline-none transition" placeholder="Tell us why you're interested in this role..."></textarea>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-2">Upload Resume (PDF) *</label>
+              <input type="file" accept=".pdf" required class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white hover:file:brightness-110 transition">
+            </div>
+
+            <button type="submit" class="w-full px-6 py-4 rounded-xl bg-primary text-white font-bold shadow-glow hover:brightness-110 transition">
+              Submit Application
+            </button>
+          </form>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid xl:grid-cols-3 gap-8">
+        <div class="space-y-4 reveal">
+          <div class="flex items-center gap-2">
+            <span class="w-8 h-8 rounded-lg glass-strong neon grid place-items-center"><i data-feather="heart" class="w-4 h-4 text-white"></i></span>
+            <span class="text-xl font-extrabold">YouthSpark</span>
+          </div>
+          <p class="text-white/70">Empowering youth since 2015 — mentorship, recovery, skills, and purpose.</p>
+          <div class="flex gap-4">
+            <a class="text-white/70 hover:text-secondary hover:scale-110 transition" href="https://www.facebook.com/people/Youth-Care/100079715082112/" aria-label="Facebook"><i data-feather="facebook"></i></a>
+            <a class="text-white/70 hover:text-secondary hover:scale-110 transition" href="https://www.instagram.com/youth__care/" aria-label="Instagram"><i data-feather="instagram"></i></a>
+            <a class="text-white/70 hover:text-secondary hover:scale-110 transition" href="https://www.whatsapp.com/channel/0029VaimmO37DAWzn1VAF329" aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </a>
+            <a class="text-white/70 hover:text-secondary hover:scale-110 transition" href="https://www.youtube.com/@Youth_Care" aria-label="YouTube"><i data-feather="youtube"></i></a>
+          </div>
+        </div>
+        <div class="xl:col-span-2 grid sm:grid-cols-3 gap-8 reveal">
+          <div>
+            <h4 class="text-white/80 font-semibold uppercase tracking-wider text-sm">Programs</h4>
+            <ul class="mt-4 space-y-3 text-white/70">
+              <li><a href="index.html#programs" class="hover:text-secondary transition">Mentorship</a></li>
+              <li><a href="index.html#programs" class="hover:text-secondary transition">Addiction Recovery</a></li>
+              <li><a href="index.html#programs" class="hover:text-secondary transition">Skill Workshops</a></li>
+              <li><a href="index.html#programs" class="hover:text-secondary transition">Career Guidance</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white/80 font-semibold uppercase tracking-wider text-sm">Support</h4>
+            <ul class="mt-4 space-y-3 text-white/70">
+              <li><a href="#" class="hover:text-secondary transition">FAQs</a></li>
+              <li><a href="privacy-policy.html" class="hover:text-secondary transition">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-secondary transition">Terms of Service</a></li>
+              <li><a href="index.html#help" class="hover:text-secondary transition">Donate</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white/80 font-semibold uppercase tracking-wider text-sm">Company</h4>
+            <ul class="mt-4 space-y-3 text-white/70">
+              <li><a href="about.html" class="hover:text-secondary transition">About</a></li>
+              <li><a href="team.html" class="hover:text-secondary transition">Team</a></li>
+              <li><a href="volunteer.html" class="hover:text-secondary transition">Volunteer</a></li>
+              <li><a href="careers.html" class="hover:text-secondary transition">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 pt-8 border-t border-white/10 text-center text-white/60">
+        © 2025 YouthSpark. All rights reserved. Registered NGO in India.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact Button -->
+  <a href="index.html#contact" id="contact-float" class="fixed bottom-5 right-5 z-50 bg-secondary text-white shadow-lg rounded-full px-5 py-3 flex items-center gap-2 hover:bg-primary hover:shadow-xl transition" title="Contact Us">
+    <i data-feather="mail"></i> Contact Us
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      feather.replace();
+
+      // Fallback scroll progress
+      const fill = document.getElementById('scrollfill');
+      if (!CSS.supports('animation-timeline: scroll()')) {
+        window.addEventListener('scroll', () => {
+          const h = document.documentElement;
+          const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight);
+          fill.style.width = (scrolled * 100).toFixed(2) + '%';
+        }, { passive: true });
+      }
+    });
+  </script>
+</body>
+</html>

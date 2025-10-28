@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programs — YouthSpark</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4F46E5',
+            secondary: '#10B981',
+            ink: '#0a0b10'
+          },
+          fontFamily: {
+            display: ['Poppins','ui-sans-serif','system-ui']
+          },
+          boxShadow: {
+            glow: '0 10px 30px rgba(79,70,229,.35), inset 0 1px 0 rgba(255,255,255,.04)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-ink text-white font-display antialiased">
+<div class="mesh-bg"></div>
+<div class="noise-overlay"></div>
+<div id="scrollbar"><div id="scrollfill"></div></div>
+
+<!-- Nav -->
+<nav class="sticky top-0 z-50 backdrop-blur bg-black/30 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+       <span class="w-8 h-8 rounded-lg glass-strong neon grid place-items-center shadow-glow overflow-hidden bg-black"><img src="assets\242704840_555691849056000_3791125399268383836_n-removebg-preview.png" alt="YouthSpark Logo" class="object-cover w-full h-full" />
+    </span>
+      <a href="index.html" class="text-xl font-extrabold hover:text-secondary transition">YouthSpark</a>
+    </div>
+    <div class="hidden md:flex items-center gap-6">
+      <a href="index.html" class="text-white/80 hover:text-white transition">Home</a>
+      <a href="programs.html" class="text-white transition">Programs</a>
+      <a href="free-resources.html" class="text-white/80 hover:text-white transition">Resources</a>
+      <a href="about.html" class="text-white/80 hover:text-white transition">About</a>
+      <a href="team.html" class="text-white/80 hover:text-white transition">Team</a>
+      <a href="volunteer.html" class="text-white/80 hover:text-white transition">Volunteer</a>
+      <a href="careers.html" class="text-white/80 hover:text-white transition">Careers</a>
+      <a href="donate.html" class="text-white/80 hover:text-white transition">Donate</a>
+      <a href="contact-us.html" class="text-white/80 hover:text-white transition">Contact</a>
+    </div>
+    <button class="md:hidden p-2 glass-strong rounded-lg" aria-label="Open menu">
+      <i data-feather="menu" class="w-5 h-5"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="relative overflow-hidden py-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 reveal">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl glass mb-4">
+        <i data-feather="zap" class="w-5 h-5 text-secondary"></i>
+        <span class="text-secondary font-semibold">Changing Lives, One Program at a Time</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6">
+        <span class="block">Our</span>
+        <span class="block text-gradient">Core Programs</span>
+      </h1>
+      <p class="text-white/80 text-lg max-w-2xl mx-auto">
+        YouthSpark delivers free, high-impact programs for reaching your potential, healing from addiction, and building lasting life skills—through mentorship, counseling, and community engagement.
+      </p>
+    </div>
+  </div>
+</header>
+
+<main class="py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Program Cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 reveal">
+      <div class="glass rounded-2xl p-8 neon card-hover text-center flex flex-col items-center justify-start">
+        <i data-feather="user-check" class="w-10 h-10 text-secondary mb-3"></i>
+        <h3 class="text-2xl font-bold mb-3">Mentorship Circles</h3>
+        <p class="text-white/80 mb-3">Personalized guidance from trained mentors. Our circles connect youth with positive role models for real-life advice & empowerment.</p>
+        <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full mb-3">Ages 12-25</span>
+        <a href="contact-us.html" class="text-secondary hover:text-primary font-semibold mt-auto">Join a Circle</a>
+      </div>
+      <div class="glass rounded-2xl p-8 neon card-hover text-center flex flex-col items-center justify-start">
+        <i data-feather="activity" class="w-10 h-10 text-secondary mb-3"></i>
+        <h3 class="text-2xl font-bold mb-3">Addiction Recovery</h3>
+        <p class="text-white/80 mb-3">Recovery camps and one-on-one support for youth fighting substance abuse. 100% confidential, led by clinical experts and peer counselors.</p>
+        <span class="text-xs bg-secondary/20 text-secondary px-3 py-1 rounded-full mb-3">Free & Confidential</span>
+        <a href="help.html" class="text-secondary hover:text-primary font-semibold mt-auto">Get Help</a>
+      </div>
+      <div class="glass rounded-2xl p-8 neon card-hover text-center flex flex-col items-center justify-start">
+        <i data-feather="book-open" class="w-10 h-10 text-secondary mb-3"></i>
+        <h3 class="text-2xl font-bold mb-3">Skill Workshops</h3>
+        <p class="text-white/80 mb-3">Monthly group workshops on communication, study skills, confidence, mental health, and career planning for young adults.</p>
+        <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full mb-3">Online & Campus</span>
+        <a href="free-resources.html" class="text-secondary hover:text-primary font-semibold mt-auto">View Materials</a>
+      </div>
+      <div class="glass rounded-2xl p-8 neon card-hover text-center flex flex-col items-center justify-start">
+        <i data-feather="briefcase" class="w-10 h-10 text-secondary mb-3"></i>
+        <h3 class="text-2xl font-bold mb-3">Career Guidance</h3>
+        <p class="text-white/80 mb-3">Expert one-on-one sessions and digital tools for career exploration, resume building, and interview prep.</p>
+        <span class="text-xs bg-secondary/20 text-secondary px-3 py-1 rounded-full mb-3">Guidance & Tools</span>
+        <a href="contact-us.html" class="text-secondary hover:text-primary font-semibold mt-auto">Book a Session</a>
+      </div>
+      <div class="glass rounded-2xl p-8 neon card-hover text-center flex flex-col items-center justify-start">
+        <i data-feather="heart" class="w-10 h-10 text-secondary mb-3"></i>
+        <h3 class="text-2xl font-bold mb-3">Mental Wellness Helpline</h3>
+        <p class="text-white/80 mb-3">Confidential phone/WhatsApp counseling for mental health and emotional support. Available to youth and families.</p>
+        <span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full mb-3">Mon-Sat 10am-6pm</span>
+        <a href="help.html" class="text-secondary hover:text-primary font-semibold mt-auto">Call Our Helpline</a>
+      </div>
+      <div class="glass rounded-2xl p-8 neon card-hover text-center flex flex-col items-center justify-start">
+        <i data-feather="users" class="w-10 h-10 text-secondary mb-3"></i>
+        <h3 class="text-2xl font-bold mb-3">Community Events</h3>
+        <p class="text-white/80 mb-3">Drug-free campaigns, positivity festivals, and outreach sessions for schools and colleges. Open for partnerships!</p>
+        <span class="text-xs bg-secondary/20 text-secondary px-3 py-1 rounded-full mb-3">All India</span>
+        <a href="contact-us.html" class="text-secondary hover:text-primary font-semibold mt-auto">Partner/Invite Us</a>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="glass rounded-2xl p-8 md:p-12 neon reveal text-center mb-12">
+      <i data-feather="plus-circle" class="w-12 h-12 text-secondary mx-auto mb-4"></i>
+      <h2 class="text-3xl font-bold mb-2">Want to Join or Learn More?</h2>
+      <p class="text-white/80 max-w-xl mx-auto mb-4">Contact our team to sign up for a program, propose a new campus event, or request a partnership or workshop in your school or community.</p>
+      <a href="contact-us.html" class="inline-flex items-center gap-2 px-6 py-3 mt-2 rounded-xl bg-primary text-white shadow-glow hover:brightness-110 transition">
+        <i data-feather="mail" class="w-4 h-4"></i> Contact YouthSpark Team
+      </a>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="reveal">
+      <h2 class="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
+        <i data-feather="help-circle" class="w-8 h-8 text-secondary"></i>
+        Program FAQs
+      </h2>
+      <div class="max-w-2xl mx-auto space-y-4">
+        <div class="glass rounded-xl p-4 neon">
+          <h3 class="font-bold text-lg mb-2">Are programs free?</h3>
+          <p class="text-white/80">Yes! All YouthSpark programs and support services are 100% free for youth and families.</p>
+        </div>
+        <div class="glass rounded-xl p-4 neon">
+          <h3 class="font-bold text-lg mb-2">Can I attend remotely?</h3>
+          <p class="text-white/80">Most workshops and mentorship sessions are available online via Google Meet/Zoom across India.</p>
+        </div>
+        <div class="glass rounded-xl p-4 neon">
+          <h3 class="font-bold text-lg mb-2">Is there a minimum age or requirement?</h3>
+          <p class="text-white/80">Youth ages 12–25 (or caregivers/teachers) are eligible. Some programs have specific focus age groups—ask us which fits you best.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="border-t border-white/10 mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="grid xl:grid-cols-3 gap-8">
+      <div class="space-y-4 reveal">
+        <div class="flex items-center gap-2">
+          <span class="w-8 h-8 rounded-lg glass-strong neon grid place-items-center"><i data-feather="heart" class="w-4 h-4 text-white"></i></span>
+          <span class="text-xl font-extrabold">YouthSpark</span>
+        </div>
+        <p class="text-white/70">Empowering youth since 2015 — mentorship, recovery, skills, and purpose.</p>
+        <div class="flex gap-4">
+          <a class="text-white/70 hover:text-secondary hover:scale-110 transition" href="https://www.facebook.com/people/Youth-Care/100079715082112/" aria-label="Facebook"><i data-feather="facebook"></i></a>
+          <a class="text-white/70 hover:text-secondary hover:scale-110 transition" href="https://www.instagram.com/youth__care/" aria-label="Instagram"><i data-feather="instagram"></i></a>
+          <a class="text-white/70 hover:text-secondary hover:scale-110 transition" href="https://wa.me/919876543210" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+          </a>
+          <a class="text-white/70 hover:text-secondary hover:scale-110 transition" href="#" aria-label="YouTube"><i data-feather="youtube"></i></a>
+        </div>
+      </div>
+      <div class="xl:col-span-2 grid sm:grid-cols-3 gap-8 reveal">
+        <div>
+          <h4 class="text-white/80 font-semibold uppercase tracking-wider text-sm">Programs</h4>
+          <ul class="mt-4 space-y-3 text-white/70">
+            <li><a href="programs.html#mentorship" class="hover:text-secondary transition">Mentorship</a></li>
+            <li><a href="programs.html#recovery" class="hover:text-secondary transition">Addiction Recovery</a></li>
+            <li><a href="programs.html#workshops" class="hover:text-secondary transition">Skill Workshops</a></li>
+            <li><a href="programs.html#career" class="hover:text-secondary transition">Career Guidance</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white/80 font-semibold uppercase tracking-wider text-sm">Support</h4>
+          <ul class="mt-4 space-y-3 text-white/70">
+            <li><a href="#" class="hover:text-secondary transition">FAQs</a></li>
+            <li><a href="privacy-policy.html" class="hover:text-secondary transition">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-secondary transition">Terms of Service</a></li>
+            <li><a href="donate.html" class="hover:text-secondary transition">Donate</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white/80 font-semibold uppercase tracking-wider text-sm">Company</h4>
+          <ul class="mt-4 space-y-3 text-white/70">
+            <li><a href="about.html" class="hover:text-secondary transition">About</a></li>
+            <li><a href="team.html" class="hover:text-secondary transition">Team</a></li>
+            <li><a href="volunteer.html" class="hover:text-secondary transition">Volunteer</a></li>
+            <li><a href="careers.html" class="hover:text-secondary transition">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 pt-8 border-t border-white/10 text-center text-white/60">
+      © 2025 YouthSpark. All rights reserved. Registered NGO in India.
+    </div>
+  </div>
+</footer>
+
+<a href="help.html" id="contact-float" class="fixed bottom-5 right-5 z-50 bg-secondary text-white shadow-lg rounded-full px-5 py-3 flex items-center gap-2 hover:bg-primary hover:shadow-xl transition" title="Get Help">
+  <i data-feather="life-buoy"></i> Get Help
+</a>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    feather.replace();
+    const fill = document.getElementById('scrollfill');
+    if (!CSS.supports('animation-timeline: scroll()')) {
+      window.addEventListener('scroll', () => {
+        const h = document.documentElement;
+        const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight);
+        fill.style.width = (scrolled * 100).toFixed(2) + '%';
+      }, { passive: true });
+    }
+  });
+</script>
+</body>
+</html>
